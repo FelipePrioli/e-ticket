@@ -13,6 +13,11 @@ function comprar(){
     let quantidade = document.getElementById('qtd').value
     console.log(quantidade)
 
+    if(quantidade < 0){
+        alert("Erro 904 - Forneça um numero positivio")
+        quantidade = ''
+    }
+
     if(tipoDoIngresso == "pista" && quantidade < pista){
         pista = pista - quantidade
         document.getElementById('qtd-pista').innerText = pista
